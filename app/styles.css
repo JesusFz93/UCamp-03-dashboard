@@ -1,6 +1,5 @@
-body {
-  background: #570000;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  color: #333;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
