@@ -1,46 +1,82 @@
+import {makeChart} from './utils/chart.js';
+import {request} from './utils/requests.js';
+import {dataStates, ranges, options} from './utils/usa-states.js';
 
-const obtener = () => {
-    const info = fetch('https://api.covidtracking.com/v1/us/daily.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        return data;
-    })
+const btnObtener = document.getElementById("btnObtener");
+const selectType = document.getElementById("selectType");
+const selectRange = document.getElementById("selectRange");
+const selectState = document.getElementById("selectState");
+
+const imprimirOpcion = () => {
+    const rangeOption = selectRange.options[selectRange.selectedIndex];
+    const optonOption = selectType.options[selectType.selectedIndex];
+    const stateOption = selectState.options[selectState.selectedIndex];
+
+    if(stateOption.value === "nooption" || rangeOption.value === "nooption" || optonOption.value === "nooption") {
+        // msjAdvertencia();
+        // limpiar();
+
+        return false;
+    }
+
+    getInfo(stateOption.value.toLowerCase(), optonOption.value.toLowerCase(), rangeOption.value);
 }
 
+const getInfo = async (stateCode, optionCode, rangeCode) => {
 
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
+    console.log(optionCode);
+    
+    const respuesta = await request(stateCode);
+
+    const last30 = respuesta.slice(0, rangeCode);
+
+    const arraySorted = last30.sort(function (a, b) {
+        let dateA = new Date(a.date), dateB = new Date(b.date)
+        return dateA - dateB
+    });
+    
+    const dates = arraySorted.map(({date}) => date);
+    const positives = arraySorted.map((data) => data[optionCode]);
+    
+    makeChart(dates, positives);
+
+    return {
+        dates,
+        positives
+    };
+
+}
+
+const prepInfo = () => {
+
+    for(let i = 0; i < options.length; i++) {
+        let opt = document.createElement('option');
+        opt.innerHTML = options[i].name;
+        opt.value = options[i].abbreviation;
+        selectType.appendChild(opt);
     }
-});
+                                            
+    for(let i = 0; i < ranges.length; i++) {
+        let opt = document.createElement('option');
+        opt.innerHTML = ranges[i].name;
+        opt.value = ranges[i].abbreviation;
+        selectRange.appendChild(opt);
+    }
+
+    for(let i = 0; i < dataStates.length; i++) {
+        let opt = document.createElement('option');
+        opt.innerHTML = dataStates[i].name;
+        opt.value = dataStates[i].abbreviation;
+        selectState.appendChild(opt);
+    }
+}
+
+window.onload = function() {
+    prepInfo();
+}
+
+selectType.addEventListener("change", imprimirOpcion);
+selectRange.addEventListener("change", imprimirOpcion);
+selectState.addEventListener("change", imprimirOpcion);
+
+btnObtener.addEventListener("click", getInfo);

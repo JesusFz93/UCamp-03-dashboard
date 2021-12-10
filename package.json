@@ -13,8 +13,5 @@
   "type": "module",
   "devDependencies": {
     "browser-sync": "^2.27.7"
-  },
-  "dependencies": {
-    "chart.js": "^3.6.2"
   }
 }

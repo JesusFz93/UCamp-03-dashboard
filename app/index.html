@@ -10,13 +10,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <canvas id="myChart"></canvas>
-      </div>
+    <header>
+        <h1>
+            Covid cases in the USA by state
+        </h1>
+    </header>
 
-      <button type="button" onclick="obtener()" >Obtener</button>
+    <main>
+        <article>
+            <form>
+                <h2>Selecciona un tipo</h2>
+                <select id="selectType" aria-label="Default select example">
+                    <option value="nooption" selected>Seleccionar</option>
+                </select>
+                
+                <h2>Selecciona un rango</h2>
+                <select id="selectRange" aria-label="Default select example">
+                    <option value="nooption" selected>Seleccionar</option>
+                </select>
+
+                <h2>Selecciona un estado</h2>
+                <select id="selectState" aria-label="Default select example">
+                    <option value="nooption" selected>Seleccionar</option>
+                </select>
+            </form>
+        </article>
+        <article>
+            
+        </article>
+        <canvas id="myChart"></canvas>
+    </main>
+
+      <button id="btnObtener" type="button" >Obtener</button>
 
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="app.js"></script>
+      
+       <script type="module" src="app.js"></script>
 </body>
 </html>
