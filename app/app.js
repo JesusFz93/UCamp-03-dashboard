@@ -1,3 +1,14 @@
+
+const obtener = () => {
+    const info = fetch('https://api.covidtracking.com/v1/us/daily.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        return data;
+    })
+}
+
+
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
