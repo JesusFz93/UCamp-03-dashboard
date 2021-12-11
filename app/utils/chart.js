@@ -2,14 +2,14 @@
 const ctx = document.getElementById('myChart').getContext('2d');
 let myChart;
 
-export const makeChart = (dates, positives) => {
+export const makeChart = (dates, positives, tipo) => {
 
     if (myChart) {
         myChart.destroy();
     }
     
     myChart = new Chart(ctx, {
-        type: 'bar',
+        type: tipo,
         data: {
             labels: dates,
             datasets: [{

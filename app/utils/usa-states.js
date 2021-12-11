@@ -1,3 +1,14 @@
+export const chartOptions = [
+    {
+        "name": "Barras",
+        "abbreviation": "bar"
+    },
+    {
+        "name": "Pie",
+        "abbreviation": "pie"
+    }
+];
+
 export const options = [
     {
         "name": "Positive",
