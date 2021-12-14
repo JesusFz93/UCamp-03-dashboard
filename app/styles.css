@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.btn.btn-primary{
+  background-color: rgb(31, 29, 126);
+  display: flex;
+  margin-top: 50px;
+}
