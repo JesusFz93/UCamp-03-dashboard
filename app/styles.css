@@ -8,6 +8,12 @@ body{
   width: 100%;
 }
 
+.h1, h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  text-align-last: center;
+  font-family: 'Exo 2', sans-serif;;
+}
+
 #sectionCurrent {
   text-align: center;
 }
