@@ -63,7 +63,10 @@ body{
 }
 
 
-
+.btn.btn-primary{
+  background-color: rgb(31, 29, 126);
+  margin-top: 50px;
+}
 
 @media (max-width: 1100px) {  
   
