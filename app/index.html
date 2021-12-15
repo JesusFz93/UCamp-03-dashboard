@@ -6,15 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <canvas id="myChart"></canvas>
-      </div>
+    <header>
+        <h1>
+            Covid cases in the USA by state
+        </h1>
+    </header>
+    <section id="sectionCurrent"></section>    
+    <section id="sectionCanvas">
+        <article>
+            <h2>Casos positivos y negativos diario</h2>
+            <canvas id="allData"></canvas>
+        </article>
+        <article>
+            <h2>Seguimiento por estado</h2>
+            <canvas id="currentByState"></canvas>
+        </article>
+    </section>
+    <main>
+        <article>
+            <form>
+                <h2>Selecciona un tipo</h2>
+                <select id="selectType" aria-label="Default select example">
+                    <option value="nooption" selected>Seleccionar</option>
+                </select>
+                
+                <h2>Selecciona un rango</h2>
+                <select id="selectRange" aria-label="Default select example">
+                    <option value="nooption" selected>Seleccionar</option>
+                </select>
 
-    <script src="app.js"></script>
+                <h2>Selecciona un estado</h2>
+                <select id="selectState" aria-label="Default select example">
+                    <option value="nooption" selected>Seleccionar</option>
+                </select>
+
+                <h2>Selecciona un tipo de grafica</h2>
+                <select id="selectChart" aria-label="Default select example">
+                    <option value="nooption" selected>Seleccionar</option>
+                </select>
+            </form>
+        </article>
+        <canvas id="myChart"></canvas>
+    </main>
+    <button id="btnObtener" type="button" >Obtener</button>      
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>      
+      <script type="module" src="app.js"></script>
 </body>
 </html>
