@@ -101,6 +101,7 @@ body{
   }
     
 }
-.form{
-display: flex;
+
+.horizontal{
+  display: inline-block;
 }
