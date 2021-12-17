@@ -7,9 +7,9 @@
 
 body{
   width: 100%;
-  background-image: url(https://dsr.dk/sites/default/files/styles/full_standard_-_responsive/public/189/corona_slide.jpg?itok=dWtygBvg);
+  background-image: url(https://ak.picdn.net/shutterstock/videos/1047957538/thumb/1.jpg);
   background-repeat: no-repeat;
-  background-position: 1%;
+  background-position: 10%;
   
 }
 
@@ -101,6 +101,11 @@ body{
   }
     
 }
-.form{
-display: flex;
+
+.horizontal{
+  display: inline-block;
+}
+  h4{
+  
+  text-align: center;
 }
