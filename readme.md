@@ -21,4 +21,4 @@ En este proyecto se utilizaron las siguientes tecnologias:
 Enlaces de interes para el proyecto.
 
 - Repositorio: https://github.com/JesusFz93/UCamp-03-dashboard
-- Pagina publicada: https://jesusfz93.github.io/UCamp-02-crud/
+- Pagina publicada: https://jesusfz93.github.io/UCamp-03-dashboard
