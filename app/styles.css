@@ -99,9 +99,9 @@ body{
 .header__cont {
   padding:  0 50px 0 50px;
   background: #E19301;
-background: -webkit-linear-gradient(left, #E19301, #F01B50);
-background: -moz-linear-gradient(left, #E19301, #F01B50);
-background: linear-gradient(to right, #E19301, #F01B50);
+  background: -webkit-linear-gradient(left, #E19301, #F01B50);
+  background: -moz-linear-gradient(left, #E19301, #F01B50);
+  background: linear-gradient(to right, #E19301, #F01B50);
   display: grid;
   grid-template-columns: 5fr 0.5fr;
 }
@@ -125,6 +125,38 @@ background: linear-gradient(to right, #E19301, #F01B50);
 
 
 
+/* Footer */
+footer {
+    margin-top: 10%;
+    padding:  0 50px 0 50px;
+    background: #efc988;
+    display: grid;
+    grid-template-columns: 5fr 0.5fr;
+ 
+}
+
+a.sr-only {
+  font-size:x-large;
+  text-decoration: none;
+  color: white;
+  margin: 0;
+  display: inline;
+  
+}
+a.sr-only:hover {
+  font-size:x-large;
+  text-decoration: none;
+  color: rgb(192, 133, 133);
+  margin: 5;
+  display: inline;
+  
+}
+
+a.sr-only:hover::after {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 100%;
+}
 
 
 @media (max-width: 1100px) {  
@@ -156,8 +188,6 @@ background: linear-gradient(to right, #E19301, #F01B50);
       margin: 10px;
   }
 
-
-
   #sectionCanvas article{
       width: 100%;
       margin: 30px 0;
@@ -174,3 +204,6 @@ background: linear-gradient(to right, #E19301, #F01B50);
   }
     
 }
+
+
+
