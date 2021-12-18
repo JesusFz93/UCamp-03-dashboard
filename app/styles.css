@@ -1,3 +1,5 @@
+@import url(https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js);
+
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +27,7 @@ body{
   text-align: center;
   color: black;
   font-size: 1rem;
-  padding: 50px 0 50px 0;
+  padding: 50px 0 0 0;
 }
 
 #sectionCurrent h1{
@@ -114,6 +116,7 @@ body{
 .horizontal {
   padding: 0 10px 0 10px;
   justify-content: right;
+  color: antiquewhite;
 }
 
 
@@ -130,8 +133,12 @@ background: linear-gradient(to right, #E19301, #F01B50);
 .article__cont {
   padding: 100px 100px 100px 100px;
   align-items: center;
+  background: #E19301;
+background: -webkit-linear-gradient(left, #E19301, #F01B50);
+background: -moz-linear-gradient(left, #E19301, #F01B50);
+background: linear-gradient(to right, #E19301, #F01B50);
+  
 }
-
 
 .h1__title {
   color: antiquewhite;
@@ -141,7 +148,4 @@ background: linear-gradient(to right, #E19301, #F01B50);
   margin: 100px 100px 50px 150px;
 }
 
-/*
- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_1yhqhuxl.json"  background="#e43a3a"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-*/
+
