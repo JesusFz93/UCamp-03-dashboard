@@ -1,0 +1,225 @@
+@import url(https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Century Gothic"
+  
+}
+
+body{
+  width: 100%;
+ /* background-image: url(https://ak.picdn.net/shutterstock/videos/1047957538/thumb/1.jpg);*/
+  background-repeat: no-repeat;
+  background-position: 10%;
+  
+}
+
+.h1, h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  text-align-last: center;
+  font-family: 'Exo 2', sans-serif;
+
+}
+
+#sectionCurrent {
+  text-align: center;
+  color: black;
+  font-size: 1rem;
+  padding: 50px 0 0 0;
+}
+
+#sectionCurrent h1{
+  font-size: 2.5em;
+}
+
+.sectionCurrentArticle{
+  width: 15%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 1em;
+  background-color: rgba(239,201,136,255);
+  border-radius: 15px;
+}
+
+
+.sectionCurrentArticle h2{
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.sectionCurrentArticle p{
+  font-size: 2em;
+  font-weight: bold;
+
+}
+
+
+#sectionCanvas{
+  text-align: center;
+}
+
+#sectionCanvas article{
+  width: 45%;
+  display:  inline-block;
+  vertical-align: top;
+  margin: 30px 25px;
+}
+
+#sectionCanvas article h2{
+  margin: 10px 0;
+}
+
+#allData, #currentByState{
+  width: 100% !important;
+  display: inline-table;
+}
+
+
+.btn.btn-primary{
+  background-color: #dc3545;
+  border-color: white;
+  margin-top: 50px;
+  width: 100px;
+  height: 50px;
+}
+
+.context{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.horizontal {
+  padding: 0 10px 0 10px;
+  justify-content: right;
+  color: antiquewhite;
+}
+
+
+.header__cont {
+  padding:  0 50px 0 50px;
+  background: #E19301;
+  background: -webkit-linear-gradient(left, #E19301, #F01B50);
+  background: -moz-linear-gradient(left, #E19301, #F01B50);
+  background: linear-gradient(to right, #E19301, #F01B50);
+  display: grid;
+  grid-template-columns: 5fr 0.5fr;
+}
+
+.article__cont {
+  padding: 100px 100px 100px 100px;
+  align-items: center;
+  background: #E19301;
+background: -webkit-linear-gradient(left, #E19301, #F01B50);
+background: -moz-linear-gradient(left, #E19301, #F01B50);
+background: linear-gradient(to right, #E19301, #F01B50);
+  
+}
+
+.h1__title {
+  color: antiquewhite;
+  position: relative;
+  left: 120px;
+  margin: 100px 100px 50px 150px;
+}
+
+
+
+/* Footer */
+footer {
+    margin-top: 10%;
+    padding:  0 50px 0 50px;
+    background: #efc988;
+    display: grid;
+    grid-template-columns: 5fr 0.5fr;
+ 
+}
+
+a.sr-only {
+  font-size:x-large;
+  text-decoration: none;
+  color: white;
+  margin: 0;
+  display: inline;
+  
+}
+a.sr-only:hover {
+  font-size:x-large;
+  text-decoration: none;
+  color: rgb(192, 133, 133);
+  margin: 5;
+  display: inline;
+  
+}
+
+a.sr-only:hover::after {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 100%;
+}
+
+
+@media (max-width: 1100px) {  
+  
+
+  .sectionCurrentArticle h2 {
+    font-size: 1em
+  }
+
+  .sectionCurrentArticle p {
+    font-size: 1.5em;
+  } 
+
+  #animation{
+    display: none;
+  }
+
+  .header__cont{
+    text-align: center;
+  }
+
+  .h1__title{
+    left: 0;
+    margin : 1em 0;
+  }
+
+  .sectionCurrentArticle{
+      width: 150px;
+      margin: 10px;
+  }
+
+  #sectionCanvas article{
+      width: 100%;
+      margin: 30px 0;
+  }
+
+  .context{
+    display: block;
+  }
+
+  .horizontal{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 25px;
+  }
+    
+}
+
+.members {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.members__text {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.card__grid {
+  margin-top: 50px;
+}
