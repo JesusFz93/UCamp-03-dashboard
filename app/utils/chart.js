@@ -52,7 +52,7 @@ export const makeChart = (dates, positives, tipo) => {
 export const makeChartAll = (dates, positives, negatives, tipo) => {
 
     const dsPositivos =  {
-        label: "Positivos",
+        label: "Positives",
         data: positives, 
         backgroundColor: 'rgba(54, 162, 235, 0.2)', 
         borderColor: 'rgba(54, 162, 235, 1)', 
@@ -69,14 +69,14 @@ export const makeChartAll = (dates, positives, negatives, tipo) => {
             labels: dates,
             datasets: [
                 {
-                label: "Positivos",
+                label: "Positives",
                 data: positives, 
                 backgroundColor: 'rgba(54, 162, 235, 0.2)', 
                 borderColor: 'rgba(54, 162, 235, 1)', 
                 borderWidth: 0.5,                
                 },
                 {
-                    label: "Negativos",
+                    label: "Negatives",
                     data: negatives, 
                     backgroundColor: 'red', 
                     borderColor: 'red', 
@@ -111,14 +111,14 @@ export const makeChartCurrentByState = (deaths, hospitalizes, state, tipo) => {
             labels: state,
             datasets: [                
                 {
-                    label: "Hospitalizados",
+                    label: "Hospitalized",
                     data: hospitalizes, 
                     backgroundColor: 'green', 
                     borderColor: 'green', 
                     borderWidth: 0.5                
                 },
                 {
-                    label: "Muertos",
+                    label: "Deaths",
                     data: deaths, 
                     backgroundColor: 'red', 
                     borderColor: 'red', 
