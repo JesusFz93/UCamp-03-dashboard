@@ -106,12 +106,14 @@ body{
     
 }
 
-.horizontal{
-  display: inline-block;
+.context{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-  h4{
-  
-  text-align: center;
+
+.horizontal {
+  padding: 0 10px 0 10px;
+  justify-content: right;
 }
 
 
@@ -124,7 +126,7 @@ background: linear-gradient(to left, #F5A001, #F01B50);
 }
 
 .article__cont {
-  margin: 100px 0 100px 0;
+  padding: 100px 100px 100px 100px;
   align-items: center;
 }
 
