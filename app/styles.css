@@ -77,8 +77,11 @@ body{
 
 
 .btn.btn-primary{
-  background-color: rgb(31, 29, 126);
+  background-color: #dc3545;
+  border-color: white;
   margin-top: 50px;
+  width: 100px;
+  height: 50px;
 }
 
 .context{
