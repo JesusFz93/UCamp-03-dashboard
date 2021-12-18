@@ -7,7 +7,7 @@
 
 body{
   width: 100%;
-  background-image: url(https://ak.picdn.net/shutterstock/videos/1047957538/thumb/1.jpg);
+ /* background-image: url(https://ak.picdn.net/shutterstock/videos/1047957538/thumb/1.jpg);*/
   background-repeat: no-repeat;
   background-position: 10%;
   
@@ -17,15 +17,19 @@ body{
 .h1, h1 {
   font-size: calc(1.375rem + 1.5vw);
   text-align-last: center;
-  font-family: 'Exo 2', sans-serif;;
+  font-family: 'Exo 2', sans-serif;
+
 }
 
 #sectionCurrent {
   text-align: center;
+  color: black;
+  font-size: 1rem;
+  padding: 50px 0 50px 0;
 }
 
 #sectionCurrent h1{
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 .sectionCurrentArticle{
@@ -108,4 +112,23 @@ body{
   h4{
   
   text-align: center;
+}
+
+
+.header__cont {
+  padding: 70px 0 70px 0;
+  background: #F5A001;
+background: -webkit-linear-gradient(right, #F5A001, #F01B50);
+background: -moz-linear-gradient(right, #F5A001, #F01B50);
+background: linear-gradient(to left, #F5A001, #F01B50);
+}
+
+.article__cont {
+  margin: 100px 0 100px 0;
+  align-items: center;
+}
+
+
+.h1__title {
+  color: antiquewhite;
 }
