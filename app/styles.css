@@ -15,7 +15,6 @@ body{
   
 }
 
-
 .h1, h1 {
   font-size: calc(1.375rem + 1.5vw);
   text-align-last: center;
@@ -50,7 +49,7 @@ body{
 }
 
 .sectionCurrentArticle p{
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bold;
 
 }
@@ -80,33 +79,6 @@ body{
 .btn.btn-primary{
   background-color: rgb(31, 29, 126);
   margin-top: 50px;
-}
-
-@media (max-width: 1100px) {  
-  
-
-  .sectionCurrentArticle h2 {
-    font-size: 1em
-  }
-
-  .sectionCurrentArticle p {
-    font-size: 2em;
-  } 
-}
-
-
-
-@media (max-width: 1100px) {
-  .sectionCurrentArticle{
-      width: 150px;
-      margin: 10px;
-  }
-
-  #sectionCanvas article{
-      width: 100%;
-      margin: 30px 0;
-  }
-    
 }
 
 .context{
@@ -145,8 +117,55 @@ background: linear-gradient(to right, #E19301, #F01B50);
   color: antiquewhite;
   position: relative;
   left: 120px;
-
   margin: 100px 100px 50px 150px;
 }
 
 
+
+
+
+@media (max-width: 1100px) {  
+  
+
+  .sectionCurrentArticle h2 {
+    font-size: 1em
+  }
+
+  .sectionCurrentArticle p {
+    font-size: 1.5em;
+  } 
+
+  #animation{
+    display: none;
+  }
+
+  .header__cont{
+    text-align: center;
+  }
+
+  .h1__title{
+    left: 0;
+    margin : 1em 0;
+  }
+
+  .sectionCurrentArticle{
+      width: 150px;
+      margin: 10px;
+  }
+
+  #sectionCanvas article{
+      width: 100%;
+      margin: 30px 0;
+  }
+
+  .context{
+    display: block;
+  }
+
+  .horizontal{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 25px;
+  }
+    
+}
