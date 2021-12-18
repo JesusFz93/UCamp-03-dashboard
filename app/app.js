@@ -132,25 +132,25 @@ const getInfoCurrentByUSA = async () => {
     var contenido = document.querySelector('#sectionCurrent')
 
     contenido.innerHTML = `
-        <h1>Resumen actual USA</h1>
+        <h1>Current summary USA</h1>
         <article class="sectionCurrentArticle">
-            <h2>Estados</h2>
+            <h2>States</h2>
             <p>${states}</p>
         </article>
         <article class="sectionCurrentArticle">
-            <h2>Positivos</h2>
+            <h2>Positives</h2>
             <p>${positives}</p>
         </article>
         <article class="sectionCurrentArticle">
-            <h2>Negativos</h2>
+            <h2>Negatives</h2>
             <p>${negatives}</p>
         </article>
         <article class="sectionCurrentArticle">
-            <h2>Hospitalizados</h2>
+            <h2>Hospitalized</h2>
             <p>${hospitalizes}</p>
         </article>
         <article class="sectionCurrentArticle">
-            <h2>Fallecidos</h2>
+            <h2>Deaths</h2>
             <p>${deaths}</p>
         </article>
     `
