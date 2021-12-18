@@ -2,7 +2,6 @@ import {makeChart, makeChartAll, makeChartCurrentByState} from './utils/chart.js
 import {request, requestAll, requestCurrentState, requestCurrentUs} from './utils/requests.js';
 import {dataStates, ranges, options, chartOptions} from './utils/usa-states.js';
 
-const btnObtener = document.getElementById("btnObtener");
 const selectType = document.getElementById("selectType");
 const selectRange = document.getElementById("selectRange");
 const selectState = document.getElementById("selectState");
@@ -116,8 +115,6 @@ selectRange.addEventListener("change", imprimirOpcion);
 selectState.addEventListener("change", imprimirOpcion);
 selectChart.addEventListener("change", imprimirOpcion);
 
-btnObtener.addEventListener("click", getInfo);
-
 
 const getInfoCurrentByUSA = async () => {
 
@@ -162,5 +159,3 @@ window.onload = function() {
     getInfoCurrentByState();
     getInfoAll();
 }
-
-/*btnObtener.addEventListener("click", getInfoAll(optonOption.value.toLowerCase(), chartOption.value));*/

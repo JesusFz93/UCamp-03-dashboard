@@ -205,5 +205,21 @@ a.sr-only:hover::after {
     
 }
 
+.members {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
+.members__text {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
 
+.card__grid {
+  margin-top: 50px;
+}
